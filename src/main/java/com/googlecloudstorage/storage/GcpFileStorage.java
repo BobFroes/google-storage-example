@@ -7,7 +7,6 @@ import com.google.cloud.storage.BlobId;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,7 +17,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Objects;
 
-@Slf4j
 @Component
 public class GcpFileStorage {
 
