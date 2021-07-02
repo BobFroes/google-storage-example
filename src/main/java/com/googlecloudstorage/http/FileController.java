@@ -12,12 +12,8 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class FileController {
 
-    private final GcpFileStorage gcpFileStorage;
-
     @Autowired
-    public FileController(GcpFileStorage gcpFileStorage) {
-        this.gcpFileStorage = gcpFileStorage;
-    }
+    private GcpFileStorage gcpFileStorage;
 
     @PostMapping("/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {

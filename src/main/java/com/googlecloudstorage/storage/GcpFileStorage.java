@@ -15,13 +15,10 @@ import java.util.Objects;
 @Component
 public class GcpFileStorage {
 
-    private final Storage storage;
-    private static final String BUCKET_NAME = "evoluumlabs";
-
     @Autowired
-    public GcpFileStorage(Storage storage) {
-        this.storage = storage;
-    }
+    private Storage storage;
+
+    private static final String BUCKET_NAME = "evoluumlabs";
 
     public String upload(MultipartFile file) {
         try {
